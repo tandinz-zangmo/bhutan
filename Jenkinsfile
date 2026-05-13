@@ -1,12 +1,19 @@
 pipeline{
   agent any
   stages{
-    stage ('hello'){
+    stage ('build'){
       steps{
-        echo "demo of pipeline from Poll SCM" 
-        echo "for trial"
-        sh 'echo "tandin in tandin"> /home/tandin'
-        sh 'cat tandin'
+        echo "building" 
+      }
+    }
+    stage ('test'){
+      steps{
+        echo "testing"
+      }
+    }
+    stage ('deploy'){
+      steps{
+        echo "deploying"
       }
     }
   }
