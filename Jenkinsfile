@@ -3,15 +3,13 @@ pipeline {
 
     stages {
 
-        stage('System Info') {
+        stage('Clone Repository') {
             steps {
-                sh 'hostname'
-                sh 'uptime'
-                sh 'df -h'
+                git 'https://github.com/git/git.git'
             }
         }
 
-        stage('List Files') {
+        stage('Verify Files') {
             steps {
                 sh 'ls -lrt'
             }
