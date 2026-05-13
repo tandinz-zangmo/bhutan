@@ -4,9 +4,9 @@ pipeline{
     stage ('hello'){
       steps{
         echo "demo of pipeline from Poll SCM" 
-        // echo "for trial"
-        // echo "tandin in tandin"> tandin
-        sh 'cat file1'
+        echo "for trial"
+        sh 'echo "tandin in tandin"> /home/tandin'
+        sh 'cat tandin'
       }
     }
   }
